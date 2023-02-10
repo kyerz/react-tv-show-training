@@ -23,3 +23,12 @@
 .input:focus {
   outline-color: #fff;
 }
+
+@media screen and (max-width: 768px) {
+  .input {
+    margin-top: 20px;
+  }
+  .search_icon {
+    margin-top: 27px;
+  }
+}

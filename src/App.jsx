@@ -60,36 +60,41 @@ export function App() {
 
   return (
     <div
-      className={style.main_container}
+      className={style.main_background}
       style={{
         background: currentTVShow
           ? `linear-gradient( rgba(0,0,0,0.5), rgba(0,0,0,0.5)), no-repeat center/ cover url("${BACKDROP_BASE_URL}${currentTVShow.backdrop_path}")`
           : "black",
       }}
     >
-      <div className={style.header}>
-        <div className="row">
-          <div className="col-4">
-            <div>
-              <Logo
-                title="Popcorn TV"
-                subtitle={"Find a show right now !"}
-                image={logo}
-              />
+      <div className={style.main_container}>
+        <div className={style.header}>
+          <div className="row align-items-center">
+            <div className="col-4">
+              <div>
+                <Logo
+                  title="Popcorn TV"
+                  subtitle={"Find a show right now !"}
+                  image={logo}
+                />
+              </div>
+            </div>
+            <div className={`col-sm-12 col-md-4 ${style["search-container"]}`}>
+              <SearchBar onSubmit={searchTVShow} />
             </div>
           </div>
-          <div className="col-sm-12 col-md-4">
-            <SearchBar onSubmit={searchTVShow} />
-          </div>
         </div>
-      </div>
-      <div className={style.tv_show_detail}>
-        {currentTVShow && <TVShowDetail tvShow={currentTVShow} />}
-      </div>
-      <div className={style.recommandations}>
-        {recommandationList.length > 0 && (
-          <TVShowList TVShowList={recommandationList} onClickItem={setCurrentTVShow} />
-        )}
+        <div className={style.tv_show_detail}>
+          {currentTVShow && <TVShowDetail tvShow={currentTVShow} />}
+        </div>
+        <div className={style.recommandations}>
+          {recommandationList.length > 0 && (
+            <TVShowList
+              TVShowList={recommandationList}
+              onClickItem={setCurrentTVShow}
+            />
+          )}
+        </div>
       </div>
     </div>
   );

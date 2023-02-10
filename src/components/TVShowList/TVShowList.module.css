@@ -6,11 +6,27 @@
 
 .list:hover {
   overflow-x: scroll;
-
 }
 .list {
   display: flex;
   width: calc(100vw - 25px);
   overflow-x: hidden;
   padding-bottom: 20px;
+}
+
+@media screen and (max-width: 576px) {
+  .title {
+    text-align: center;
+    margin-top: 20px;
+  }
+  .list {
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 0;
+    width: 100%;
+
+  }
+  .list:hover {
+    overflow: hidden;
+  }
 }

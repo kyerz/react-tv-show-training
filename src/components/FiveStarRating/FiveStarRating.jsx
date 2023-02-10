@@ -18,5 +18,5 @@ export function FiveStarRating({ rating }) {
     }
   }
 
-  return <div>{starList.map((star) => star)}</div>;
+  return <div className={style.stars_container}>{starList.map((star) => star)}</div>;
 }

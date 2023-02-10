@@ -30,3 +30,12 @@
   width: 0;
   height: 0;
 }
+
+@media screen and (max-width: 576px) {
+  .title {
+    text-align: center;
+  }
+  .rating_container {
+    justify-content: center;
+  }
+}

@@ -1,22 +1,33 @@
+.main_background {
+  background-color: black;
+}
 .main_container{
   display: flex;
   flex-direction: column;
   height: 100vh;
   padding: 25px;
-  background-color: black;
 }
 
 .header{
   flex: 1;
-
 }
 
 .tv_show_detail{
   flex: 2;
-
 }
 
 .recommandations{
   flex: 1;
+}
 
+.search-container {
+  position: relative;
+}
+
+@media screen and (max-width: 576px) {
+  .main_container{
+    overflow-x: hidden;
+    align-items: center;
+    padding: 25px 0 25px 15px;
+  }
 }
