@@ -14,7 +14,6 @@ export class TVShowAPI {
     const response = await axios.get(
       `${BASE_URL}/tv/${tvShowId}/recommendations${API_KEY_PARAM}&language=fr-FR`
     );
-    console.log(response.data.results);
     return response.data.results;
   }
 
@@ -22,7 +21,6 @@ export class TVShowAPI {
     const response = await axios.get(
       `${BASE_URL}/search/tv${API_KEY_PARAM}&language=fr-FR&query=${show}`
     );
-    console.log(response.data.results);
     return response.data.results;
   }
 }

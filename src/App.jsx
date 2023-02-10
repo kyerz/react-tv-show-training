@@ -38,13 +38,11 @@ export function App() {
   };
 
   useEffect(() => {
-    console.log("*** fetch data");
     fetchPopularsShows();
   }, []);
 
   useEffect(() => {
     if (currentTVShow) {
-      console.log("*** fetch recommandations");
       fetchRecommandations(currentTVShow.id);
     }
   }, [currentTVShow]);
@@ -53,15 +51,12 @@ export function App() {
     try {
       const searchResponse = await TVShowAPI.fetchByTitle(tvShowName);
       if (searchResponse.length > 0) {
-        console.log({ currenTVShow: searchResponse });
         setCurrentTVShow(searchResponse[0]);
       }
     } catch (err) {
       alert("Erreur lors de la recherche de la série" + err.message);
     }
   };
-
-  console.log("*** recommandations", recommandationList);
 
   return (
     <div
