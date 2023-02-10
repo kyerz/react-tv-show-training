@@ -1,0 +1,32 @@
+.title{
+  font-weight: 400;
+  font-size: 3rem;
+}
+
+.rating {
+  margin-top: 5px;
+  margin-left: 8px;
+}
+
+.rating_container {
+  display: flex;
+  align-items: center;
+}
+
+.overview {
+  font-family: roboto;
+  font-weight: 400;
+  font-size: 1.4rem;
+  height: 140px;
+  overflow: hidden;
+  margin-top: 10px;
+}
+
+.overview:hover {
+  overflow-y: auto;
+}
+
+.overview::-webkit-scrollbar { /* WebKit */
+  width: 0;
+  height: 0;
+}
