@@ -72,11 +72,7 @@ export function App() {
           <div className="row align-items-center">
             <div className="col-4">
               <div>
-                <Logo
-                  title="Popcorn TV"
-                  subtitle={"Find a show right now !"}
-                  image={logo}
-                />
+                <Logo title="Popcorn TV" subtitle={"Find a show right now !"} image={logo} />
               </div>
             </div>
             <div className={`col-sm-12 col-md-4 ${style["search-container"]}`}>
@@ -84,15 +80,10 @@ export function App() {
             </div>
           </div>
         </div>
-        <div className={style.tv_show_detail}>
-          {currentTVShow && <TVShowDetail tvShow={currentTVShow} />}
-        </div>
+        <div className={style.tv_show_detail}>{currentTVShow && <TVShowDetail tvShow={currentTVShow} />}</div>
         <div className={style.recommandations}>
           {recommandationList.length > 0 && (
-            <TVShowList
-              TVShowList={recommandationList}
-              onClickItem={setCurrentTVShow}
-            />
+            <TVShowList TVShowList={recommandationList} onClickItem={setCurrentTVShow} />
           )}
         </div>
       </div>
